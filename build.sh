@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-pip wheel --wheel-dir=./wheels/ ${PACKAGE}==${VERSION}
+pip wheel --no-deps --wheel-dir=./wheels/ ${PACKAGE}==${VERSION}
 
 if [ "$(find ./wheels/* | wc -l)" != "1" ]; then
     echo "Too many files"
