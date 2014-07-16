@@ -10,5 +10,4 @@ fi
 
 filename="$(basename $(find ./wheels/*))"
 
-curl -F "wheel=@./wheels/$filename" -u $SERVER_USER:$SERVER_PASSWORD \
-    http://travis-wheels.unterwaditzer.net/upload
+curl -F "wheel=@./wheels/$filename" -F "secret_key=$SECRET_KEY"  http://travis-wheels.unterwaditzer.net/upload

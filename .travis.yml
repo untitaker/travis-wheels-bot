@@ -7,3 +7,5 @@ env:
 install: pip install wheel
 
 script: sh build.sh
+
+secure: "Wmnjp82EEkIoE795dQpQV+fhWz3NTPVaNtXJ6qVu5jbAiYE0ouWtx/jT4dw/LXaXuXlzYG37CzeWUuzS8KxvIXFwlb05cxhKgZjMoFBSZQMhUbVDNdiIuIFT+zHUpvNJYMtifWr52xca+anRJcgErJ42+4306TwvB3WODd1XFz0="
