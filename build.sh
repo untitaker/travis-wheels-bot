@@ -9,5 +9,6 @@ if [ "$(find ./wheels/* | wc -l)" != "1" ]; then
 fi
 
 filename="$(basename $(find ./wheels/*))"
+[ -n "$HOST" ] || HOST="http://travis-wheels.unterwaditzer.net"
 
-curl -F "wheel=@./wheels/$filename" -F "secret_key=$SECRET_KEY"  http://travis-wheels.unterwaditzer.net/upload
+curl -F "wheel=@./wheels/$filename" -F "secret_key=$SECRET_KEY" "$HOST/upload"
