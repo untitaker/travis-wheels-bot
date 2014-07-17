@@ -8,6 +8,4 @@ env:
     global:
         secure: fwk013cuhbsbGjadDJfWNf7/mMAUb5Pgqw1J5QB0Ob37jKPCxJJN2SsWeRqaC+mrXsiBZ43DqMQ+n+U20cxPK15XRUip/fXHsGDpzUwl79nIUovgrtWWtVaj6RTtuk8httDWpaM3SE+Jy2UAzkOljzuGK6h7KwGQ8hSTvQjYPak=
 
-install: pip install wheel
-
 script: sh build.sh
