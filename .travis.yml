@@ -2,6 +2,8 @@ language: python
 
 python:
     - "2.7"
+    - "3.3"
+    - "3.4"
 env:
     matrix:
         - PACKAGE=coverage VERSION=3.7.1
