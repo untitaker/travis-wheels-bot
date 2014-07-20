@@ -27,6 +27,6 @@ if [[ $package_url == $HOST* ]]; then
     echo "$package_url"
 else
     echo "Not a package URL:"
-    echo $package_url"
+    echo "$package_url"
     exit 1
 fi
