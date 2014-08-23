@@ -23,10 +23,13 @@ filename="$(basename $(find ./wheels/*))"
 
 package_url="$(curl -F "wheel=@./wheels/$filename" -F "secret_key=$SECRET_KEY" "$HOST/upload")"
 
-if [[ $package_url == $HOST* ]]; then
-    echo "$package_url"
-else
-    echo "Not a package URL:"
-    echo "$package_url"
-    exit 1
-fi
+case "$package_url" in
+    $HOST*)
+        echo "$package_url"
+        ;;
+    *)
+        echo "Not a package URL:"
+        echo "$package_url"
+        exit 1
+        ;;
+esac
