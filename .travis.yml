@@ -12,6 +12,7 @@ env:
         - PACKAGE=lxml VERSION=3.3.5
         - PACKAGE=pyyaml VERSION=3.11
         # Werkzeug
+        - PACKAGE=greenlet VERSION=0.4.3
         - PACKAGE=pyopenssl VERSION=0.14
         - PACKAGE=cffi VERSION=0.8.6
         - PACKAGE=cryptography VERSION=0.5.4
