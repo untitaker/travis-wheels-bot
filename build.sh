@@ -3,11 +3,13 @@ set -e
 [ -n "$HOST" ] || HOST="http://travis-wheels.unterwaditzer.net"
 
 package_exists() {
-    curl "$HOST/wheels/$PACKAGE/" | grep -i "$PACKAGE-$VERSION" | grep "$(echo $TRAVIS_PYTHON_VERSION | tr -d .)"
+    pip install -q --no-install --no-deps -i "$HOST/wheels/" $PACKAGE==$VERSION
 }
 if package_exists; then
     echo "Package already exists."
     exit
+else
+    echo "Package doesn't exist yet."
 fi
 
 pip install wheel
