@@ -10,7 +10,7 @@ env:
     matrix:
         # Vdirsyncer
         - PACKAGE=coverage VERSION=3.7.1
-        - PACKAGE=lxml VERSION=3.4.1
+        - PACKAGE=lxml VERSION=3.4.2
         - PACKAGE=pyyaml VERSION=3.11
         # Werkzeug
         - PACKAGE=greenlet VERSION=0.4.5
